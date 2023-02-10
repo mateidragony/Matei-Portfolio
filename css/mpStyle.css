@@ -1,0 +1,48 @@
+html{
+    background-color: black;
+}   
+header{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+h1.header{
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color:whitesmoke;
+    font-size: 400%;
+}
+
+hr.header{
+    height: 10px;
+    background-color: red;
+    color: red;
+    border: none;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+#arcadeBG{
+    width: 95vw;
+}
+
+#screen{
+    position: absolute;
+    background-image: url("./../assets/images/LLC_Campaign_Poster.png");
+    background-size: 100% 100%;
+    top: 0px;
+    left: 0px;
+}
+
+#buttOne{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    top: 0px;
+    left: 0px;
+}

@@ -1,0 +1,88 @@
+
+* {
+    color: rgb(197, 197, 197);
+    font-family: niceFont;
+}
+
+@font-face {
+    font-family: niceFont;
+    src: url("./../assets/NeueHelveticaBQ-Bold.otf");
+}
+
+html{
+    min-height: 100vh;
+    background: radial-gradient(circle at 10px 0px,rgb(40, 21, 85) 5%,transparent 40%),
+                radial-gradient(circle at 100% 100%, rgb(40, 21, 85) 5%, #020010 40%);
+}
+
+body{
+    /* background-color: rgb(20, 20, 20); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.side-col{
+    background-color: rgb(30,30,30);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 20%;
+    margin-top: 10px;
+    padding: 20px;
+    border: 5px solid rgb(20, 20, 20);
+    border-radius: 20px;
+}
+
+.center-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:60%;
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    /* background-color: rgb(60, 60, 60); */
+    /* border: 5px solid rgb(20, 20, 20); */
+    font-size: 60px;
+}
+
+#about, #projects{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+hr{
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+a{
+    padding: 10px;
+}
+
+.buttDiv{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.butt{
+    width: 50%;
+    height: 50px;
+    color: rgb(20, 20, 20);
+}
