@@ -32,8 +32,9 @@ main{
 
 #screen{
     position: absolute;
-    background-image: url("./../assets/images/LLC_Campaign_Poster.png");
+    background-color: #1b1b1b;
     background-size: 100% 100%;
+    border:#fff solid 5px;
     top: 0px;
     left: 0px;
 }
@@ -45,4 +46,22 @@ main{
     border-radius: 50px;
     top: 0px;
     left: 0px;
+}
+
+#tetrisImg {
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 15px;
+}
+
+#froggerImg{
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
 }
