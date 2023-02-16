@@ -48,20 +48,18 @@ main{
     left: 0px;
 }
 
-#tetrisImg {
+#polybiusImg{
     object-fit: cover;
     position: absolute;
     top: 0px;
     left: 0px;
-    border-radius: 15px;
+    border-radius: 10%; 
 }
 
-#froggerImg{
+.puzzImg {
     object-fit: cover;
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 200px;
-    height: 200px;
-    border-radius: 15px;
+    border-radius: 10%;
 }

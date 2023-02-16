@@ -2,8 +2,11 @@
 const arcadeImg = document.getElementById("arcadeBG");
 const screenDiv = document.getElementById("screen");
 const buttOne = document.getElementById("buttOne");
-const tetris = document.getElementById("tetrisImg");
-const frogger = document.getElementById("froggerImg");
+const polybius = document.getElementById("polybiusImg");
+
+
+const gameImgs = document.getElementsByClassName("puzzImg");
+
 
 
 window.addEventListener("resize", e => changeWidths());
@@ -12,12 +15,26 @@ window.addEventListener("DOMContentLoaded", e => changeWidths());
 function changeWidths(){
     //header.style.fontSize = (window.innerWidth / 30)+"px";
     const arcadeBGW = 535.0;
-    116, 198;
+    const imgSqSize = 45.0;
+    const xStartOffset = 121.0;
+    const yStartOffset = 194.0;
+    const margins = 8.0; 
+
     changeElementSizeAndLocation(screenDiv, arcadeImg, 276.0/353.0, 353.0/arcadeBGW, 99.0/353.0, 184.0/353.0); // Resize screen div
     changeElementSizeAndLocation(buttOne, arcadeImg, 23.0/29.0, 29.0/arcadeBGW, 127.0/29.0, 527.0/29.0); // Resize butt one
-    changeElementSizeAndLocation(tetris, arcadeImg, 1, 56.0/arcadeBGW, 116.0/56.0, 198.0/56.0);
-    changeElementSizeAndLocation(frogger, arcadeImg, 1, 56.0/arcadeBGW, 186.0/56.0, 198.0/56.0);
+    
+    // Polybius
+    changeElementSizeAndLocation(polybius, arcadeImg, 750.0/650.0, 100.0/arcadeBGW, (xStartOffset + 105.0)/100.0, (yStartOffset + 65.0)/100.0);
 
+    for(let i=0; i<gameImgs.length; i++){
+        const imgsPerRow = 6;
+        row = Math.floor(i/imgsPerRow);
+        col = i%imgsPerRow;
+
+        changeElementSizeAndLocation(gameImgs[i], arcadeImg, 1, imgSqSize/arcadeBGW,
+            (xStartOffset + col * (imgSqSize + margins))/imgSqSize, (yStartOffset + row * (imgSqSize + margins))/imgSqSize);
+
+    }
 }
 
 function changeElementSizeAndLocation(element, container, whRatio, wRatio, offXRatio, offYRatio){
