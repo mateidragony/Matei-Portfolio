@@ -33,8 +33,9 @@ main{
 #screen{
     position: absolute;
     background-color: #1b1b1b;
+    background-image: url("./../assets/images/mpImages/screen.png");
     background-size: 100% 100%;
-    border:#fff solid 5px;
+    border:#000000 solid 15px;
     top: 0px;
     left: 0px;
 }
@@ -54,6 +55,7 @@ main{
     top: 0px;
     left: 0px;
     border-radius: 10%; 
+    z-index: 1;
 }
 
 .puzzImg {
@@ -62,4 +64,8 @@ main{
     top: 0px;
     left: 0px;
     border-radius: 10%;
+}
+
+img.puzzImg{
+    border: black 2px solid;
 }

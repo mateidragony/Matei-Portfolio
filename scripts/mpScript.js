@@ -20,7 +20,7 @@ function changeWidths(){
     const yStartOffset = 194.0;
     const margins = 8.0; 
 
-    changeElementSizeAndLocation(screenDiv, arcadeImg, 276.0/353.0, 353.0/arcadeBGW, 99.0/353.0, 184.0/353.0); // Resize screen div
+    changeElementSizeAndLocation(screenDiv, arcadeImg, 276.0/353.0, 353.0/arcadeBGW, 94.0/353.0, 182.0/353.0); // Resize screen div
     changeElementSizeAndLocation(buttOne, arcadeImg, 23.0/29.0, 29.0/arcadeBGW, 127.0/29.0, 527.0/29.0); // Resize butt one
     
     // Polybius
