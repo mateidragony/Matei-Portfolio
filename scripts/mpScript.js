@@ -7,10 +7,11 @@ const polybius = document.getElementById("polybiusImg");
 
 const gameImgs = document.getElementsByClassName("puzzImg");
 
-
-
 window.addEventListener("resize", e => changeWidths());
 window.addEventListener("DOMContentLoaded", e => changeWidths());
+
+//Every ten seconds as well
+const changeWInterval = setInterval(changeWidths, 10000);
 
 function changeWidths(){
     //header.style.fontSize = (window.innerWidth / 30)+"px";
@@ -22,11 +23,8 @@ function changeWidths(){
 
     changeElementSizeAndLocation(screenDiv, arcadeImg, 276.0/353.0, 353.0/arcadeBGW, 94.0/353.0, 182.0/353.0); // Resize screen div
     changeElementSizeAndLocation(buttOne, arcadeImg, 23.0/29.0, 29.0/arcadeBGW, 127.0/29.0, 527.0/29.0); // Resize butt one
-    
-    // Polybius
-    changeElementSizeAndLocation(polybius, arcadeImg, 750.0/650.0, 100.0/arcadeBGW, (xStartOffset + 105.0)/100.0, (yStartOffset + 65.0)/100.0);
 
-    for(let i=0; i<gameImgs.length; i++){
+    for(let i=0; i<gameImgs.length - 1; i++){
         const imgsPerRow = 6;
         row = Math.floor(i/imgsPerRow);
         col = i%imgsPerRow;
@@ -35,6 +33,11 @@ function changeWidths(){
             (xStartOffset + col * (imgSqSize + margins))/imgSqSize, (yStartOffset + row * (imgSqSize + margins))/imgSqSize);
 
     }
+    changeElementSizeAndLocation(gameImgs[gameImgs.length-1], arcadeImg, 0.5, imgSqSize * 1.5/arcadeBGW, 
+        (xStartOffset + 2.3 * (imgSqSize + margins))/(imgSqSize * 1.5), (yStartOffset + 3.1 * (imgSqSize + margins))/(imgSqSize * 1.5));
+
+    // Polybius
+    changeElementSizeAndLocation(polybius, arcadeImg, 750.0/650.0, 85.0/arcadeBGW, (xStartOffset + 113.0)/85.0, (yStartOffset + 55.0)/85.0);
 }
 
 function changeElementSizeAndLocation(element, container, whRatio, wRatio, offXRatio, offYRatio){

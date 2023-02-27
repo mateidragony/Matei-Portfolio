@@ -49,6 +49,10 @@ main{
     left: 0px;
 }
 
+#extraImg{
+    z-index: 2;
+}
+
 #polybiusImg{
     object-fit: cover;
     position: absolute;
