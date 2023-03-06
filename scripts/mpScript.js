@@ -1,3 +1,4 @@
+
 //const header = document.getElementById("header_heading");
 const arcadeImg = document.getElementById("arcadeBG");
 const screenDiv = document.getElementById("screen");
@@ -47,5 +48,3 @@ function changeElementSizeAndLocation(element, container, whRatio, wRatio, offXR
     element.style.top = Math.round(w * offYRatio) + container.offsetTop + "px";
     element.style.left = Math.round(w * offXRatio) + container.offsetLeft + "px";
 }
-
-polybius.addEventListener("click", e=> window.top.location = "./../polybiustest.html");
